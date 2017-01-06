@@ -1,0 +1,20 @@
+<template name="Page6">
+    <div id="Page" class="">
+
+        <div class="backBtn js-back">
+            <i class="fa fa-arrow-left"></i> Back
+        </div>
+
+        <div class="textContainer {{#unless ready}}notReady{{/unless}}">
+            {{helper}}
+            {{#if ready}}
+                <div class="text">Click on the "Back" button</div>
+            {{else}}
+                <div class="text">
+                    Page Loading ...
+                </div>
+            {{/if}}
+        </div>
+    </div>
+
+</template>

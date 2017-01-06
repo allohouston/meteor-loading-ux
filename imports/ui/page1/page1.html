@@ -1,0 +1,32 @@
+<template name="Page1">
+    <div id="Page" class="">
+
+        <div class="backBtn js-back">
+            <i class="fa fa-arrow-left"></i> Back
+        </div>
+
+        <div class="textContainer {{#unless ready}}notReady{{/unless}}">
+            {{text}}
+            {{helper}}
+            {{#if ready}}
+                <div class="text">Page Ready</div>
+            {{else}}
+                <div class="text">
+                    Page Loading ...
+                </div>
+            {{/if}}
+            {{> Page1Nested}}
+        </div>
+    </div>
+
+</template>
+
+<template name="Page1Nested">
+    {{#if ready}}
+        <div class="text">Nested Ready</div>
+    {{else}}
+        <div class="text">
+            Nested Loading ...
+        </div>
+    {{/if}}
+</template>
